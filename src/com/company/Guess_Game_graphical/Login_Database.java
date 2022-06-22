@@ -148,7 +148,7 @@ public class Login_Database {
 
                     PreparedStatement pst = con.prepareStatement(q);
                     pst.setString(1, usernameField.getText());
-                    pst.setString(2, passwordField.getText());
+                    pst.setString(2, passwordField.getPassword().toString());
                     ResultSet rs = pst.executeQuery();
 
                     if (rs.next()) {
